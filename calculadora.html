@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Calculadora</h1>
-    <table>
-    <tr>
-      <td colspan="4"><input id="display1" type="text" readonly /></td>
-    </tr>
-      
-    <tr>
-    <td><button class="number" id="number" value="1">%</button></td>
-    <td><button class="number" id="number" value="1">CE</button></td>
-    <td><button class="number" id="number" value="1">C</button></td>
-    <td><button class="number" id="number" value="1">Del</button></td>
-    </tr>
-    
-    <tr>
-      <td><button class="number" id="number" value="1">1/x</button></td>
-      <td><button class="number" id="number" value="1">1x2</button></td>
-      <td><button class="number" id="number" value="1">2vx</button></td>
-      <td><button class="number" id="number" value="/">/</button></td>
-    </tr>
-    <tr>
-      <td><button class="number" id="number" value="7">7</button></td>
-      <td><button class="number" id="number" value="8">8</button></td>
-      <td><button class="number" id="number" value="9">9</button></td>
-      <td><button class="number" id="number" value="*">X</button></td>
-    </tr>
-    <tr>
-      <td><button class="number" id="number" value="4">4</button>
-      <td><button class="number" id="number" value="5">5</button>
-      <td><button class="number" id="number" value="6">6</button>
-      <td><button class="number" id="number" value="-">-</button>
-  </tr>
-  <tr>
-    <td><button class="number" id="number" value="1">1</button></td>
-    <td><button class="number" id="number" value="2">2</button></td>
-    <td><button class="number" id="number" value="3">3</button></td>
-    <td><button class="number" id="number" value="+">+</button></td>
-  </tr>
-  <tr>
-    <td><button class="number" id="number" value="1">+/-</button></td>
-    <td><button class="number" id="number" value="0">0</button></td>
-    <td><button class="number" id="number" value=".">.</button></>
-    <td><button class="equal" id="equal" value="1"> = </button></td>
-  </tr>
-    </table>
-    <script src="script2.js"></script>
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+  <main>
+    <section>
+      <div class="calculator">
+        <div class="displays">
+          <input id="display1" type="text" readonly />
+          <br>
+          <input id="display2" type="text" readonly />
+        </div>
+        <button id="percent">%</button>
+        <button id="clearError">CE</button></td>
+        <button id="clearAll">C</button>
+        <button id="del">Del</button>
+        <button id="invert">1/x</button>
+        <button id="sqr">1x2</button>
+        <button id="raiz">2vx</button>
+        <button id="number" value="/">/</button>
+        <button id="number" value="7">7</button>
+        <button id="number" value="8">8</button>
+        <button id="number" value="9">9</button>
+        <button id="number" value="*">X</button>
+        <button id="number" value="4">4</button>
+        <button id="number" value="5">5</button>
+        <button id="number" value="6">6</button>
+        <button id="number" value="-">-</button>
+        <button id="number" value="1">1</button>
+        <button id="number" value="2">2</button>
+        <button id="number" value="3">3</button>
+        <button id="number" value="+">+</button>
+        <button id="changeSign">+/-</button>
+        <button id="number" value="0">0</button>
+        <button id="number" value=".">.</button>
+        <button id="equal">=</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>
