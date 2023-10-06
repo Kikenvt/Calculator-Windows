@@ -1,3 +1,7 @@
+/**@author: Enrique Fernández - Campoamor Fernández
+ * Github: 
+ */
+
 const topDisplay = document.getElementById("topDisplay")
 const bottomDisplay = document.getElementById("bottomDisplay")
 const numbers = document.querySelectorAll("#numOp")

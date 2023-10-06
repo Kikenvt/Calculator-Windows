@@ -1,1 +1,1 @@
- ## Creando una calculadora en HTML5, CSS3 YU Javascript similar a las funciones de la de Windows 
+ ## Creando una calculadora en HTML5, CSS3 Y Javascript similar a las funciones de la de Windows 
