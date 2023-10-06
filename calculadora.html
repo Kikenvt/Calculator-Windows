@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora</title>
   <link rel="stylesheet" href="style.css" />
+  
 </head>
 
 <body>
@@ -15,38 +16,39 @@
     <section>
       <div class="calculator">
         <div class="displays">
-          <input id="display1" type="text" readonly />
+          <input class="topDisplay" id="topDisplay" type="text" readonly />
           <br>
-          <input id="display2" type="text" readonly />
+          <input class="bottomDisplay" id="bottomDisplay" type="text" readonly />
         </div>
-        <button id="percent">%</button>
+        <button id="percent" class="fa-solid fa-percent"></button>
         <button id="clearError">CE</button></td>
         <button id="clearAll">C</button>
-        <button id="del">Del</button>
+        <button id="delete" class="fa-solid fa-delete-left"></button>
         <button id="invert">1/x</button>
-        <button id="sqr">1x2</button>
-        <button id="raiz">2vx</button>
-        <button id="number" value="/">/</button>
-        <button id="number" value="7">7</button>
-        <button id="number" value="8">8</button>
-        <button id="number" value="9">9</button>
-        <button id="number" value="*">X</button>
-        <button id="number" value="4">4</button>
-        <button id="number" value="5">5</button>
-        <button id="number" value="6">6</button>
-        <button id="number" value="-">-</button>
-        <button id="number" value="1">1</button>
-        <button id="number" value="2">2</button>
-        <button id="number" value="3">3</button>
-        <button id="number" value="+">+</button>
-        <button id="changeSign">+/-</button>
-        <button id="number" value="0">0</button>
-        <button id="number" value=".">.</button>
-        <button id="equal">=</button>
+        <button id="square">x<sup>2</sup></button>
+        <button id="squareRoot" class="fa-solid fa-square-root-variable"></button>
+        <button id="numOp" value="/" class="fa-solid fa-divide"></button>
+        <button id="numOp" class="numbers" value="7">7</button>
+        <button id="numOp" class="numbers" value="8">8</button>
+        <button id="numOp" class="numbers" value="9">9</button>
+        <button id="numOp" value="*" class="fa-solid fa-xmark"></button>
+        <button id="numOp" class="numbers" value="4">4</button>
+        <button id="numOp" class="numbers" value="5">5</button>
+        <button id="numOp" class="numbers" value="6">6</button>
+        <button id="numOp" value="-" class="fa-solid fa-minus"></button>
+        <button id="numOp" class="numbers" value="1">1</button>
+        <button id="numOp" class="numbers" value="2">2</button>
+        <button id="numOp" class="numbers" value="3">3</button>
+        <button id="numOp" value="+" class="fa-solid fa-plus"></button>
+        <button id="changeSign" class="fa-solid fa-plus-minus"></button>
+        <button id="numOp" class="numbers" value="0">0</button>
+        <button id="numOp" class="numbers" value=".">,</button>
+        <button id="equal" class="fa-solid fa-equals"></button>
       </div>
     </section>
   </main>
   <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/d341efcb41.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

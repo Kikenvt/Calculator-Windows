@@ -1,15 +1,25 @@
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color:rgb(76, 73, 73) 
+  background: rgb(40, 40, 42);
+  background: radial-gradient(
+    circle,
+    rgba(40, 40, 42, 1) 29%,
+    rgba(92, 89, 98, 1) 93%
+  );
 }
 
-section{
+section {
   margin: 100px;
   background-color: rgb(51, 50, 50);
   padding: 1px;
-  
 }
 
 .calculator {
@@ -18,7 +28,6 @@ section{
   align-content: center;
   grid-template-columns: repeat(4, 115px);
   grid-template-rows: minmax(90px, auto) repeat(6, 80px);
-  
   text-align: center;
   background-color: rgba(105, 103, 103, 0.259);
 }
@@ -31,18 +40,18 @@ section{
   border-radius: 1px;
 }
 
-#display1,
-#display2 {
+.topDisplay,
+.bottomDisplay {
+  
   padding: 20px;
   display: flex;
-  font-size: 1rem;
+  font-size: 2rem;
   background-color: black;
   color: rgb(255, 255, 255);
   border: 0px;
   outline: none;
   font-size: 2rem;
   text-align: right;
-  border-radius: 10px;
 }
 
 button {
@@ -56,11 +65,28 @@ button {
   color: white;
 }
 
-button:hover{
+button:hover {
   background-color: #7472726c;
   transition: 0.3;
 }
 
-.numbers{
+.fa-equals {
+  background-color: rgba(255, 166, 0, 0.939);
+}
 
+.fa-equals:hover {
+  background-color: rgba(255, 166, 0, 0.724);
+  transition: 0.3;
+}
+
+.numbers,
+.fa-plus-minus {
+  background-color: #7472726c;
+}
+
+.numbers:hover {
+  background-color: #4c4c4c;
+}
+.fa-plus-minus:hover {
+  background-color: #4c4c4c;
 }

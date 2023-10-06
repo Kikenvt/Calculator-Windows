@@ -1,79 +1,81 @@
-const display1 = document.getElementById("display1")
-const display2 = document.getElementById("display2")
-const numbers = document.querySelectorAll("#number")
-const sqr = document.getElementById("sqr")
-const raiz = document.getElementById("raiz")
+const topDisplay = document.getElementById("topDisplay")
+const bottomDisplay = document.getElementById("bottomDisplay")
+const numbers = document.querySelectorAll("#numOp")
+const square = document.getElementById("square")
+const squareRoot = document.getElementById("squareRoot")
 const percent = document.getElementById("percent")
 const clearAll = document.getElementById("clearAll")
 const clearError = document.getElementById("clearError")
-const del = document.getElementById("del")
+const del = document.getElementById("delete")
 const invert = document.getElementById("invert")
 const equal = document.getElementById("equal")
 const changeSign = document.getElementById("changeSign")
-let resetdisplay2 = false
+let isResetBottomDisplay = false
 
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
-    if (resetdisplay2) {
-      display2.value = ""
-      resetdisplay2 = false
+    if (isResetBottomDisplay) {
+      bottomDisplay.value = ""
+      isResetBottomDisplay = false
     }
-    display2.value += number.value
+    bottomDisplay.value += number.value
   })
 })
 
 equal.addEventListener("click", () => {
+  if(bottomDisplay.value !=="")
   try {
-    display1.value = parseFloat(eval(display2.value))
-    resetdisplay2 = true
+    topDisplay.value = parseFloat(eval(bottomDisplay.value))
+    isResetBottomDisplay = true
   } catch {
-    alert("Error")
+    bottomDisplay.value = "Syntax ERROR"
+    topDisplay.value = ""
+    isResetBottomDisplay = true
   }
 })
 
 del.addEventListener("click", () => {
-  display2.value = display2.value.slice(0, -1)
-  
-  resetdisplay2 = false
+  bottomDisplay.value = bottomDisplay.value.slice(0, -1)
+
+  isResetBottomDisplay = false
 })
 
 clearAll.addEventListener("click", () => {
-  display1.value = ""
-  display2.value = ""
+  topDisplay.value = ""
+  bottomDisplay.value = ""
 })
 
 clearError.addEventListener("click", () => {
-  resetdisplay2 = false
-  display1.value = "0"
+  topDisplay.value = "0"
+  isResetBottomDisplay = false
 })
 
-sqr.addEventListener("click", () => {
-  display1.value = Math.pow(eval(display2.value), 2)
-  display2.value = `sqr(${display2.value})`
-  resetdisplay2 = true
+square.addEventListener("click", () => {
+  topDisplay.value = Math.pow(eval(bottomDisplay.value), 2)
+  bottomDisplay.value = `sqr(${bottomDisplay.value})`
+  isResetBottomDisplay = true
 })
 
-raiz.addEventListener("click", () => {
-  display1.value = Math.pow(eval(display2.value), 0.5)
-  display2.value = `raiz(${display2.value})`
-  resetdisplay2 = true
+squareRoot.addEventListener("click", () => {
+  topDisplay.value = Math.pow(eval(bottomDisplay.value), 0.5)
+  bottomDisplay.value = `raiz(${bottomDisplay.value})`
+  isResetBottomDisplay = true
 })
 
 percent.addEventListener("click", () => {
-  display1.value = parseFloat(display2.value / 100)
-  resetdisplay2 = true
+  topDisplay.value = parseFloat(eval(bottomDisplay.value) / 100)
+  isResetBottomDisplay = true
 })
 
 changeSign.addEventListener("click", () => {
-  if (display1.value !== 0){
-    display1.value = -1 * (display1.value)
-  }else{
-    display1.value
-
+  if (topDisplay.value !== 0) {
+    topDisplay.value = -1 * topDisplay.value
+  } else {
+    topDisplay.value
   }
 })
 
-invert.addEventListener("click", () =>{
- display2.value = parseFloat(1/(display2.value))
- resetdisplay2 = true
+invert.addEventListener("click", () => {
+  bottomDisplay.value = parseFloat(1 / bottomDisplay.value)
+  isResetBottomDisplay = true
 })
